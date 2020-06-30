@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrateCompany">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="שם העסק" />
+
+        <EditText
+            android:id="@+id/company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
+        <TextView
+            android:id="@+id/wrongCompany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0000"
+            android:textSize="8sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="העסק הוא רשת?" />
+
+        <RadioGroup
+            android:id="@+id/net"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/yes"
+                android:contentDescription="yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="כן ובדקתי שעוד לא פתחו משתמש לרשת"
+                android:layoutDirection="rtl"/>
+
+            <RadioButton
+                android:id="@+id/no"
+                android:contentDescription="no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="וואלה לא"
+                android:layoutDirection="rtl" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/wrongNet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0000"
+            android:textSize="8sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="צדיק/ה דקה מזמנך תבדוק שעוד לא פתחו לרשת שלך משתמש
+                                אם כבר קיים משתמש תוכל לפתוח בקלות משתמש לסניף" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/branch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="צור סניף חדש" />
+        <Spinner
+            android:id="@+id/allCompanies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="מה סוג העסק" />
+
+        <Spinner
+            android:id="@+id/type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <EditText
+            android:id="@+id/otherType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="אחר"
+            android:visibility="gone"
+            android:textSize="12dp"/>
+        <TextView
+            android:id="@+id/wrongType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0000"
+            android:textSize="8sp"
+            />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="הוסף תפקידים שיש בעסק" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/enterProfession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="הכנס תפקיד" />
+
+        <EditText
+            android:id="@+id/professionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ניתן להסיר תפקיד בלחיצה עליו"
+            android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/myProfessions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/userProfessions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/wrongProfessions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0000"
+            android:textSize="8sp"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="כמה משמרות יש ביום?" />
+
+        <RadioGroup
+            android:id="@+id/numOfShifts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            />
+
+            <RadioButton
+                android:id="@+id/n3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="3"
+                android:layoutDirection="rtl"
+                android:text="3 (כמו באבטחה)" />
+
+            <RadioButton
+                android:id="@+id/n2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="2"
+                android:layoutDirection="rtl"
+                android:text="2 (כמו חנות)" />
+
+            <RadioButton
+                android:id="@+id/n1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="1"
+                android:textIsSelectable="true"
+                android:layoutDirection="rtl"
+                android:text="1 (כמו בבר)"
+                android:textDirection="rtl" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/wrongNumOfShifts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0000"
+            android:textSize="8sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="סידור לדוגמה" />
+
+        <include layout="@layout/table_textview"/>
+
+        <TextView
+            android:id="@+id/wrongMissingPart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="נא למלא את כל השדות"
+            android:visibility="invisible"
+            android:textColor="#FF0000"
+            android:textSize="8sp" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="שלח" />
+
+    </LinearLayout>
+</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

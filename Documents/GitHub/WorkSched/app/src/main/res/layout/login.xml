@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="13">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="12"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"/>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="כניסה"
+            android:textSize="15dp" />
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:hint="email" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:hint="password" />
+
+
+
+        <TextView
+            android:id="@+id/wrongPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="שם משתמש או סיסמה לא נכונים"
+            android:textColor="#FF0000"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/wrongEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="משתמש לא קיים"
+            android:textColor="#FF0000"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="התחבר" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="הרשמה"
+            android:textSize="15dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+        <Button
+            android:id="@+id/newEmployee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="עובד חדש" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/newBranch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="סניף חדש" />
+
+            <Button
+                android:id="@+id/newCompany"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="עסק חדש" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/allEmployees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+        <include
+            layout="@layout/navigate_buttons"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+    <!--
+
+    <LinearLayout
+        android:id="@+id/navigateBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        android:backgroundTint="@color/Black"
+        >
+
+
+        <Button
+            android:id="@+id/fillMySched"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/PrimeryLightBlue"
+            android:text="הגש משמרות"/>
+
+        <Button
+            android:id="@+id/nextWeekSched"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="שבוע הבא"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/mySched"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="השבוע"
+            android:backgroundTint="@color/PrimeryDarkBlue"/>
+
+        <Button
+            android:id="@+id/setSched"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="בניית סידור"
+            android:backgroundTint="@color/PrimeryLightBlue"/>
+
+    </LinearLayout>
+
+    -->

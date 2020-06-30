@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <TableLayout
+            style="@style/TableLayout"
+            android:layout_height="wrap_content">
+
+
+            <TableRow
+                style="@style/TableRow">
+
+
+                <TextView
+                    android:id="@+id/day6"
+                    android:layout_column="0"
+                    android:text="שבת"
+                    style="@style/TableEdge" />
+
+                <TextView
+                    android:id="@+id/day5"
+                    android:layout_column="1"
+                    android:text="שישי"
+                    style="@style/TableEdge"/>
+
+                <TextView
+                    android:id="@+id/day4"
+                    style="@style/TableEdge"
+                    android:layout_column="2"
+                    android:text="חמישי" />
+
+                <TextView
+                    android:id="@+id/day3"
+                    android:layout_column="3"
+                    android:text="רביעי"
+                    style="@style/TableEdge"/>
+
+                <TextView
+
+                    android:id="@+id/day2"
+                    android:layout_column="4"
+                    android:text="שלישי"
+                    style="@style/TableEdge"/>
+
+                <TextView
+                    android:id="@+id/day1"
+                    android:layout_column="5"
+                    android:text="שני"
+                    style="@style/TableEdge"/>
+
+                <TextView
+                    android:id="@+id/day0"
+                    android:layout_column="6"
+                    android:text="ראשון"
+                    style="@style/TableEdge" />
+
+                <TextView
+                    android:id="@+id/magnified"
+                    android:layout_column="7"
+                    style="@style/TableEdge" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+                <!-- style="@style/TableRow"-->
+
+
+                <LinearLayout
+                    android:id="@+id/shift6"
+                    android:layout_column="0"
+                    android:contentDescription="06"
+                    style="@style/LinearLayoutStyle">
+
+                    <!--
+                    <TextView
+                        android:layout_column="0"
+                        android:text="שבת"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"/>
+
+                    <TextView
+                        android:layout_column="1"
+                        android:text="שישי"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"/>
+
+                    <TextView
+                        android:layout_column="2"
+                        android:text="חמישי"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" />
+                    -->
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/shift5"
+                    style="@style/LinearLayoutStyle"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:contentDescription="05"></LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/shift4"
+                    android:contentDescription="04"
+                    android:layout_column="2"
+                    style="@style/LinearLayoutStyle" />
+
+                <LinearLayout
+                    style="@style/LinearLayoutStyle"
+                    android:id="@+id/shift3"
+                    android:contentDescription="03"
+                    android:layout_column="3"/>
+
+                <LinearLayout
+                    android:id="@+id/shift2"
+                    android:contentDescription="02"
+                    android:layout_column="4"
+                    style="@style/LinearLayoutStyle" />
+
+                <LinearLayout
+                    android:id="@+id/shift1"
+                    android:contentDescription="01"
+                    android:layout_column="5"
+                    style="@style/LinearLayoutStyle"/>
+
+                <LinearLayout
+                    android:id="@+id/shift0"
+                    android:contentDescription="00"
+                    android:layout_column="6"
+                    style="@style/LinearLayoutStyle"/>
+
+                <TextView
+                    android:id="@+id/shiftName1"
+                    style="@style/TableEdge"
+                    android:layout_height="19dp"
+                    android:layout_column="7"
+                    android:text="בוקר" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row2"
+                style="@style/TableRow">
+
+
+                <LinearLayout
+                    android:id="@+id/shift13"
+                    android:layout_column="0"
+                    android:contentDescription="16"
+                    style="@style/LinearLayoutStyle"/>
+
+
+                <LinearLayout
+                    android:id="@+id/shift12"
+                    android:layout_column="1"
+                    android:contentDescription="15"
+                    style="@style/LinearLayoutStyle"/>
+
+                <LinearLayout
+                    android:id="@+id/shift11"
+                    android:contentDescription="14"
+                    android:layout_column="2"
+                    style="@style/LinearLayoutStyle" />
+
+                <LinearLayout
+                    android:id="@+id/shift10"
+                    android:contentDescription="13"
+                    android:layout_column="3"
+                    style="@style/LinearLayoutStyle"/>
+
+                <LinearLayout
+                    android:id="@+id/shift9"
+                    android:contentDescription="12"
+                    android:layout_column="4"
+                    style="@style/LinearLayoutStyle" />
+
+                <LinearLayout
+                    android:id="@+id/shift8"
+                    android:contentDescription="11"
+                    android:layout_column="5"
+                    style="@style/LinearLayoutStyle"/>
+
+                <LinearLayout
+                    android:id="@+id/shift7"
+                    android:contentDescription="10"
+                    android:layout_column="6"
+                    style="@style/LinearLayoutStyle"/>
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:id="@+id/shiftName2"
+                    android:layout_column="7"
+                    android:text="ערב"
+                    style="@style/TableEdge" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row3"
+                style="@style/TableRow">
+
+                <LinearLayout
+                    android:id="@+id/shift20"
+                    android:layout_column="0"
+                    android:contentDescription="26"
+                    style="@style/LinearLayoutStyle"/>
+
+
+                <LinearLayout
+                    android:id="@+id/shift19"
+                    android:layout_column="1"
+                    android:contentDescription="25"
+                    style="@style/LinearLayoutStyle"/>
+
+                <LinearLayout
+                    android:id="@+id/shift18"
+                    android:contentDescription="24"
+                    android:layout_column="2"
+                    style="@style/LinearLayoutStyle" />
+
+                <LinearLayout
+                    android:id="@+id/shift17"
+                    android:contentDescription="23"
+                    android:layout_column="3"
+                    style="@style/LinearLayoutStyle"/>
+
+                <LinearLayout
+                    android:id="@+id/shift16"
+                    android:contentDescription="22"
+                    android:layout_column="4"
+                    style="@style/LinearLayoutStyle" />
+
+                <LinearLayout
+                    android:id="@+id/shift15"
+                    android:contentDescription="21"
+                    android:layout_column="5"
+                    style="@style/LinearLayoutStyle"/>
+
+                <LinearLayout
+                    android:id="@+id/shift14"
+                    android:contentDescription="20"
+                    android:layout_column="6"
+                    style="@style/LinearLayoutStyle"/>
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:id="@+id/shiftName3"
+                    android:textSize="13dp"
+                    android:layout_column="7"
+                    android:text="לילה"
+                    style="@style/TableEdge" />
+
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+</LinearLayout>
+

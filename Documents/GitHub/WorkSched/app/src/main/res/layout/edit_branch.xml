@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditBranch">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="-16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/createSched"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="צור סידור לדוגמה" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/setName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="שמור שם" />
+
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/addressTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="תאר את כתובת העסק בקצרה, לדוגמה ביג אשדוד או קניון הזהב ראשלצ" />
+
+            <TextView
+                android:id="@+id/wrongAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#FF0000"
+                android:textSize="8sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="הכנס את מספר העובדים בכל משמרת" />
+
+            <TextView
+                android:id="@+id/wrongSchedRequired"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="מותר להכניס רק מספרים לטבלה"
+                android:textColor="#FF0000"
+                android:textSize="8sp"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/wrongEmptyTable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="חייב להזין מספר בלפחות משמרת אחת"
+                android:textColor="#FF0000"
+                android:textSize="8sp"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/table_edit_text"
+                layout="@layout/table_edit_text" />
+
+
+            <LinearLayout
+                android:id="@+id/afterCreateSched"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/setSched"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="שמור משמרות" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="בנוסף ניתן גם לשנות את השמות של המשרות לדוגמה במקום בוקר לכתוב 8:00 - 15:00" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_gravity="right"
+                    android:text="ניתן לקבוע איזה תפקיד יגיע בכל משמרת"
+                    android:visibility="invisible" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_gravity="right"
+                    android:text="ניתן להוסיף הערה קבועה לכל עובד לפי מקומו בסידור" />
+
+                <include
+                    android:id="@+id/table_linear_layout"
+                    layout="@layout/table_linear_layout_edittext_edge" />
+
+                <TextView
+                    android:id="@+id/wrongShiftName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="אי אפשר להשאיר את שם המשמרת ריק"
+                    android:textColor="#FF0000"
+                    android:textSize="8sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

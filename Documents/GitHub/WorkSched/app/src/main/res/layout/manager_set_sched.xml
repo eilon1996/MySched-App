@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManagerSetSched">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="13">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="12">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/refreshSched"
+                android:text="רענן סידור"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/refreshSchedTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/notAssign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+        <include layout="@layout/table_linear_layout"/>
+
+
+            <LinearLayout
+                android:id="@+id/possibleReplacer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:visibility="invisible">
+                <TextView
+                    android:id="@+id/pRTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="מחליפים אפשרים" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/comments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/coOperateTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="תציע/י לשאר הסניפים גם להצטרף לאפליקציה וכך תוכלו להעזר אחד בשני "
+        android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/managerComments"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:hint="הוסף הערות"/>
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="פרסמם סידור"/>
+        <Button
+            android:id="@+id/unSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="הסתר סידור"
+            android:visibility="gone"/>
+
+
+        <Button
+            android:id="@+id/createAllEmployeesOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="ראה מה כל עובד הגיש" />
+
+        <LinearLayout
+            android:id="@+id/allEmployeesOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="לאחד העובדים אין את האפליקציה? מלא כאן בקלות את המשמרות שלו"/>
+        <LinearLayout
+            android:id="@+id/newEmployeeLL"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/createNewEmployee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="עובד חדש"/>
+
+        <Button
+            android:id="@+id/createCoOperate"
+            android:text="העזר בסניפים אחרים"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/emptyCoOperate"
+            android:text="גם שאר הסניפים לא יכולים לעזור לך כרגע
+                                    נסה להוסיף עוד סניפים או שתדבר איתם באופן אישי :)"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/coOperateLL"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+
+        <LinearLayout
+            android:id="@+id/coOperateButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/closeCoOperate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity=""
+                android:text="כווץ חזרה" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="30dp"/>
+
+            <Button
+                android:id="@+id/submitCoOperates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="שמור שינויים" />
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+
+        <include layout="@layout/navigate_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight= "1"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

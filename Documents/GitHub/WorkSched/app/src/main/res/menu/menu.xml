@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<group
+    android:id="@+id/everyOne">
+    <item
+        android:id="@+id/editUser"
+        android:title="עריכת משתמש" />
+    <item
+        android:id="@+id/lastWeek"
+        android:title="סידור של שבוע קודם"/>
+    <item
+        android:id="@+id/salary"
+        android:title="משכורת צפוייה" />
+</group>
+    <group
+        android:id="@+id/managerOnly">
+    <item
+        android:id="@+id/editBranch"
+        android:title="עריכת סניף" />
+    <item
+        android:id="@+id/editEmployees"
+        android:title="עריכת עובדים">
+        <menu xmlns:android="http://schemas.android.com/apk/res/android"/>
+    </item>
+
+    </group>
+    <group
+        android:id="@+id/topManager">
+    <item
+        android:id="@+id/changeBranch"
+        android:title="החלף סניף" >
+        <menu xmlns:android="http://schemas.android.com/apk/res/android"/></item>
+    </group>
+    <item android:id="@+id/logout"
+        android:title="התנתק"/>
+</menu>

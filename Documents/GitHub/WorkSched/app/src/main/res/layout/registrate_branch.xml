@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrateBranch">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+<LinearLayout
+    android:id="@+id/chooseCompany"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/allCompaniesTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="בחר את החברה שבא אתה עובד" />
+    <Spinner
+        android:id="@+id/allCompanies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/companyWasChosen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/yourCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/numOfShifts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/branchExist"
+            android:orientation="vertical">
+
+                <TextView
+                android:id="@+id/allBranchesTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="אולי כבר פתחו משתמש לסניף שלך? אם כן בחר אותו וצור עובד חדש" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/createNewEmployee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="צור עובד חדש"/>
+                    <Spinner
+                        android:id="@+id/allBranches"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+
+        </LinearLayout>
+                <TextView
+                    android:id="@+id/addressTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="תאר את כתובת העסק בקצרה, לדוגמה ביג אשדוד או קניון הזהב ראשלצ" />
+                    <EditText
+                        android:id="@+id/address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/wrongAddressEmpty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:textColor="#FF0000"
+                        android:textSize="8sp"
+                        android:text="חייב להכניס את כתובת הסניף"/>
+                    <TextView
+                        android:id="@+id/wrongAddressUsed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:textColor="#FF0000"
+                        android:textSize="8sp"
+                        android:text="כבר קיים סניף עם השם הזה, ניתן לפתוח בקלות עובד חדש לסניף"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="הכנס את מספר העובדים בכל משמרת"/>
+
+                    <include layout="@layout/table_edit_text"
+                        android:id="@+id/table_edit_text"/>
+
+                    <TextView
+                        android:id="@+id/wrongSchedRequired"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FF0000"
+                        android:textSize="8sp"
+                        android:text="מותר להכניס רק מספרים לטבלה"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/wrongEmptyTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FF0000"
+                        android:textSize="8sp"
+                        android:text="חייב להזין מספר בלפחות משמרת אחת"
+                        android:visibility="gone"/>
+
+
+                    <Button
+                        android:id="@+id/createSched"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="צור סידור לדוגמה" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/afterCreateSched"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+                    <TextView
+                        android:layout_gravity="right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:text="ניתן להוסיף הערה קבועה לכל עובד לפי מקומו בסידור"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="בנוסף ניתן גם לשנות את השמות של המשרות לדוגמה במקום בוקר לכתוב 8:00 - 15:00"/>
+                    <TextView
+                        android:layout_gravity="right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:text="ניתן לקבוע איזה תפקיד יגיע בכל משמרת"
+                        android:visibility="invisible"/>
+
+                    <include layout="@layout/table_linear_layout_edittext_edge"
+                        android:id="@+id/table_linear_layout"/>
+
+                        <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"/>
+                    <Button
+                        android:id="@+id/submit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="צור סניף"/>
+                </LinearLayout>
+            </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

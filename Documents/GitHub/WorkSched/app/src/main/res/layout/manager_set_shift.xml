@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManagerSetShift">
+
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:weightSum="18">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#B3646464" />
+
+        <LinearLayout android:orientation="horizontal"
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:layout_width="match_parent">
+
+            <LinearLayout
+                android:id="@+id/workingP"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:weightSum="16"
+                android:background="#7A4AAF96"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="#6F011C6D"
+                    android:backgroundTintMode="multiply"
+                    android:gravity="center"
+                    android:text="שובצו"
+                    android:textSize="20dp" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="13"
+                    android:layout_gravity="center_horizontal">
+                    <LinearLayout
+                        android:id="@+id/working"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+                <Button
+                    android:id="@+id/newEmployee"
+                    android:layout_width="match_parent"
+                    android:layout_weight="2"
+                    android:layout_height="0dp"
+                    android:text="הוסף עובד חדש"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/canWorkP"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:weightSum="16"
+                android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="#92016D03"
+                        android:backgroundTintMode="multiply"
+                        android:gravity="center"
+                        android:text="הגישו משמרת"
+                        android:textSize="20dp" />
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_weight="7"
+                        android:layout_height="0dp"
+                        android:background="#64FC6C"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:id="@+id/canWork"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="#DCB30202"
+                        android:backgroundTintMode="multiply"
+                        android:gravity="center"
+                        android:text="לא הגישו"
+                        android:textSize="20dp" />
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="7"
+                        android:background="#B9FF4524"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:id="@+id/cannotWork"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </LinearLayout>
+
+                    </ScrollView>
+            </LinearLayout>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/update"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="עדכן משמרת"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
